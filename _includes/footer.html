@@ -1,0 +1,53 @@
+<footer id="footer">
+    <div class="container has-text-centered has-background-grey-darker" id="backtotop">
+        <a class="has-text-white" onclick="window.scroll(0,0)" style="cursor: pointer;">RETOUR EN HAUT</a>
+    </div>
+    <div class="has-background-grey-darker">
+        <div class="container columns">
+            <div class="column has-text-left-desktop has-text-centered-mobile">
+                <a href="{{site.url}}{{site.baseurl}}/#about">
+                    <div class="columns">
+                        <div class="column is-one-fifth-desktop is-one-fifth-fullhd is-one-quarter-tablet">
+                            <figure class="image is-64x64">
+                                <img class="is-rounded" src="{{site.author-image}}">
+                            </figure>
+                        </div>
+                        <div class="column is-marginless">
+                            <h5 class="has-text-grey-lighter">{{site.author-name}}</h5>
+                            <div class="content has-text-grey">
+                                <p>{{site.author-about | truncate: 75 }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="column has-text-white">
+                <h3 class="has-text-weight-bold">Navigation</h3>
+                <ul style="list-style: none; margin-left: 0;">
+                    <li><a href="{{ site.baseurl }}/" class="has-text-grey-light">Accueil</a></li>
+                    <li><a href="{{ site.baseurl }}/cv" class="has-text-grey-light">Mon CV</a></li>
+                    <li><a href="{{ site.baseurl }}/project" class="has-text-grey-light">Mes Projets</a></li>
+                </ul>
+            </div>
+
+            <div class="column has-text-white">
+                <h3 class="has-text-weight-bold">Contact</h3>
+                <ul style="list-style: none; margin-left: 0;">
+                    <li><i class="fas fa-envelope"></i> {{ site.email }}</li>
+                    <li class="mt-2">
+                        {% unless site.linkedin_username == "/" or site.linkedin_username == "" %}
+                        <a href="http://www.linkedin.com/in/{{site.linkedin_username}}" target="_blank" class="has-text-white mx-2">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        {% endunless %}
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="has-background-black has-text-centered has-text-white" id="credits">
+        <i class="far fa-copyright"></i> {{ "now" | date: "%Y" }} | <a href="https://github.com/thedevslot/WhatATheme" target="_blank" rel="noopener noreferrer">WhatATheme</a> - Thème réalisé avec <i class="fas fa-heart has-text-danger"></i> par <a href="https://www.twitter.com/thedevslot" target="_blank" rel="noopener noreferrer">TheDevsLot</a> et modifié par <a href="https://www.linkedin.com/in/noemie-tasca" target="_blank" rel="noopener noreferrer">Noémie Tasca</a> sous <a href="https://jekyllrb.com/" target="_blank">Jekyll</a>
+    </div>
+</footer>

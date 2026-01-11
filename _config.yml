@@ -1,0 +1,107 @@
+# WhatATheme
+markdown: kramdown
+
+# URL of the Site
+url: ''
+# Base URL of the Site (i.e., Name of the Repository in which the Site is hosted)
+baseurl:
+
+# Title of the Site
+title: Noémie Tasca
+# Description of the Site
+description: Etudiante en développement web
+# URL of Image of the Site
+site-image: "/assets/images/noemie-tasca.jpg"
+# Keywords of the Site
+site-keywords: Site, Portfolio, Developper, développeur 
+# URL for the Image of custom Favicon
+favicon-url: "/assets/images/computer.ico"
+
+# URL of the Image of Custom Hero Image (i.e., the image in the background of the very first section of the Homepage)
+heroimage: "/assets/images/books.jpg"
+
+# Social Media and Contact
+# If you don't want to use any icon, you can leave them blank.
+# Social Media and Contact
+email: noemietascamaati@gmail.com
+facebook_username: /
+twitter_username: /
+instagram_username: /
+linkedin_username: noemie-tasca
+github_username: jujeh-beep-boop
+youtube_channel_id: /
+reddit_username: /
+behance_username: noemie-tasca
+dribbble_username: noemie-tasca
+spotify_username: /
+
+# Google Analytics
+google-analytics: UA-163806439-1
+
+# Disqus
+disqus-shortname: thedevslot
+
+# Name of the Author
+author-name: Noémie Tasca
+# URL for the Image of the Author
+author-image: "/assets/images/noemie-tasca.jpg"
+author-about: >-
+  Passionnée par le développement web, je suis étudiante en Web@cadémie à Epitech sur le campus de Lille.
+  Je suis à la recherche d'opportunités de stages et d'alternance pour mettre en pratique mes compétences et apprendre davantage dans le domaine du développement web.  
+  N'hésitez pas à me contacter pour toute collaboration professionnelle !
+# URL to the Author's Profile (i.e., Github, Twitter, Stackoverflow, etc)
+author-url: ""
+
+# SASS
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Build settings
+plugins:
+  - jekyll-admin
+  - jekyll-feed
+
+# Permalink
+permalink: "blog/:title"
+
+# Compress
+compress_html:
+  clippings: all
+
+# Defaults
+defaults:
+  -
+    scope:
+      type: 'posts'
+    values:
+      layout: post
+      post-image: ""
+      description: ""
+      tags:
+        - ""
+  -
+    scope:
+      type: 'pages'
+    values:
+      layout: page
+
+# Exclude
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+
+# Collections
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/

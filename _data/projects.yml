@@ -1,0 +1,24 @@
+- name: Klivio
+  image: /assets/images/network.jpg
+  link: /projects/klivio/
+  description: Intégration web au départ d'une maquette fournie. Réalisation en HTML/CSS puis à l'aide de Tailwind CSS.
+
+- name: Vote
+  image: /assets/images/vote.jpg
+  link: /projects/vote/
+  description: Création d'un système de vote en PHP basé sur deux choix donnés à l'utilisateur. Méthode de stockage permettant de garder le nombre de votes en mémoire.
+
+- name: Citations
+  image: /assets/images/citations.jpg
+  link: /projects/citations/
+  description: Générateur de citations qui permet l'affichage aléatoire de citations au clic de souris sur un bouton. Génération d'après une liste donnée dans un fichier JavaScript.
+
+- name: To-do List 
+  image: /assets/images/to-do-list.jpg
+  link: /projects/to-do-list/
+  description: Cette dynamique en JavaScript permet la création d'un formulaire permettant le stockage d'une liste de tâches. Grâce à localStorage, la liste est rechargée à l'ouverture de la page.
+
+- name: Portfolio
+  image: /assets/images/portfolio.jpg
+  link: /projects/portfolio/
+  description: Création d'un portfolio à l'aide du CMS Jekyll. C'est le projet sur lequel vous êtes actuellement !
