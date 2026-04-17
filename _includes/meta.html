@@ -5,42 +5,46 @@
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1 user-scalable=no, shrink-to-fit=no">
 <meta content='#000000' name='theme-color'/>
 <meta name="keywords" content="{{site.site-keywords}}">
+
 <title>{{site.title}}{% if page.title %} | {{page.title}}{% endif %}</title>
 
-<!-- Open Graph general (Facebook, Pinterest & Google+) -->
+<!-- Open Graph -->
 <meta name="og:title" content="{{site.title}}{% if page.title %} | {{page.title}}{% endif %}">
 <meta name="og:description" content="{% unless page.layout == 'post' %}{{site.description}}{% else %}{{page.description}}{% endunless %}">
-<meta name="og:image" content="{% unless page.layout == 'post' %}{{site.site-image}}{% else %}{{page.post-image}}{% endunless %}">
+
+{% assign og_image = site.site-image %}
+{% if page.layout == 'post' and page.post-image %}
+  {% assign og_image = page.post-image %}
+{% endif %}
+<meta name="og:image" content="{{ og_image | absolute_url }}">
 <meta name="og:image:alt" content="{{site.title}}{% if page.title %} | {{page.title}}{% endif %}">
-<meta name="og:url" content="{{site.url}}{{site.baseurl}}{{page.url}}">
-<meta name="article:author" content="https://www.facebook.com/{{site.facebook_username}}">
+<meta name="og:url" content="{{ page.url | absolute_url }}">
 <meta name="og:site_name" content="{{site.title}}{% if page.title %} | {{page.title}}{% endif %}">
 <meta name="og:type" content="website">
+
 <!-- Twitter -->
 <meta property="twitter:card" content="summary_large_image"/>
 <meta name="twitter:title" content="{{site.title}}{% if page.title %} | {{page.title}}{% endif %}">
 <meta name="twitter:description" content="{% unless page.layout == 'post' %}{{site.description}}{% else %}{{page.description}}{% endunless %}">
 <meta name="twitter:site" content="@{{site.twitter_username}}">
 <meta name="twitter:creator" content="@{{site.twitter_username}}">
-<meta name="twitter:image:src" content="{% unless page.layout == 'post' %}{{site.site-image}}{% else %}{{page.post-image}}{% endunless %}">
+<meta name="twitter:image:src" content="{{ og_image | absolute_url }}">
+
 <!-- Search Engine -->
 <meta name="description" content="{% unless page.layout == 'post' %}{{site.description}}{% else %}{{page.description}}{% endunless %}">
-<meta name="image" content="{% unless page.layout == 'post' %}{{site.site-image}}{% else %}{{page.post-image}}{% endunless %}">
-<!-- Schema.org for Google -->
+<meta name="image" content="{{ og_image | absolute_url }}">
+
+<!-- Schema.org -->
 <meta itemprop="name" content="{{site.title}}{% if page.title %} | {{page.title}}{% endif %}">
 <meta name="author" content="{{site.author-name}}"/>
 <meta itemprop="description" content="{% unless page.layout == 'post' %}{{site.description}}{% else %}{{page.description}}{% endunless %}">
-<meta itemprop="image" content="{% unless page.layout == 'post' %}{{site.site-image}}{% else %}{{page.post-image}}{% endunless %}">
+<meta itemprop="image" content="{{ og_image | absolute_url }}">
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id={{site.google-analytics}}"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-        dataLayer.push(arguments);
-    }
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', '{{site.google-analytics}}');
 </script>
