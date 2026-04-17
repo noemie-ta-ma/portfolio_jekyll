@@ -6,7 +6,7 @@
 ![GitHub%20Actions](https://img.shields.io/badge/GitHub%20Actions-2088FF?style=for-the-badge&logo=githubactions&logoColor=white)
 ![GitHub%20Pages](https://img.shields.io/badge/GitHub%20Pages-181717?style=for-the-badge&logo=github&logoColor=white)
 
-Ce dépôt contient mon **portfolio professionnel multi-pages** réalisé avec **Jekyll** (contenu rédigé en Markdown) et **déployé automatiquement** via **GitHub Pages** + **GitHub Actions**.
+Ce dépôt contient mon **portfolio professionnel multi-pages** réalisé avec **Jekyll** (principalement rédigé en Markdown) et **déployé automatiquement** via **GitHub Pages** + **GitHub Actions**.
 
 C’est un **projet débutant** qui m’a permis de découvrir la génération de site statique avec Jekyll, l’organisation d’un site maintenable, et l’automatisation du déploiement.
 
